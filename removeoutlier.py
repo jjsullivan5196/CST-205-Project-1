@@ -22,8 +22,8 @@ for x in range(1,8):
     origColor = getColor(pixSafe) #Color of pixel from safe image
     compColor = getColor(pix2) #Color of pixel from test image
     dist = distance(origColor, compColor) #Distance of color
-    if ( dist < 3):
-      setColor(pix1, replaceColor) #If the distance is less than 3 units, mark it as a similar pixel
+    if ( dist > 45):
+      setColor(pix1, replaceColor)
 
 #Show and write results
 show(pictures[0])
