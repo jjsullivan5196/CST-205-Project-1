@@ -1,2 +1,2 @@
 # CST-205-Project-1
-First Project
+TRY REMOVEOUTLIER3.PY IT'S THE BEST ONE!
