@@ -16,4 +16,4 @@ for pixl1,pixl2,pixl3 in zip(pix1,pix2,pix3):
     setColor(pixl3, getColor(pixl1))
 
 show(pic3)
-writePictureTo(pickAFile())
+writePictureTo(pic3,pickAFile())
