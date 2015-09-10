@@ -1,3 +1,4 @@
+#flipxclean.py -- Cleaner version of flipx, still not the best solution.
 showInformation("Pick two images, each with the undesired abberation on one side of the frame.\nFirst image with abberation on the RIGHT side of the frame.\nSecond image with abberation on the LEFT side of the frame.")
 #Ask user for two pictures, one with the abberation on each side of the frame. Create a copy of the first image to modify.
 pic1 = makePicture(pickAFile())

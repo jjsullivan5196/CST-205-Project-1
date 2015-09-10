@@ -1,3 +1,4 @@
+#marksimilarities.py -- marks similarlly colored pixels bewteen a few images
 #Create lists for images and individual pixels of those images
 pictures = list()
 picxels = list()

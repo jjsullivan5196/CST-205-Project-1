@@ -1,2 +1,6 @@
 # CST-205-Project-1
-TRY REMOVEOUTLIER3.PY IT'S THE BEST ONE!
+medianfinal.py is/will be the final result of this project. It's commented and everything for it to work is present in the source file. The rest is for arhive:
+
+*marksimilarities.py
+*flipx.py
+*flipxclean.py

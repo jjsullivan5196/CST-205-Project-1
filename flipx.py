@@ -1,3 +1,4 @@
+#flipx.py -- Samples pixels from either side of two similar images to make one image that is free of abberations.
 pic1 = makePicture(pickAFile())
 pic2 = makePicture(pickAFile())
 replaceColor = pickAColor()
