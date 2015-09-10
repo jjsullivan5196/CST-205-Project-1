@@ -7,7 +7,7 @@ import os
 def rgb2hex(rgb):
   return '%02x%02x%02x' % rgb  
 
-#hex2rbg() -- takes hex color triplet and converts to rgb color tuple
+#hex2rgb() -- takes hex color triplet and converts to rgb color tuple
 #Method sourced from: http://stackoverflow.com/a/4296268
 def hex2rgb(hexc):
   h1, h2, h3 = hexc[0:4], '0x' + hexc[4:6], '0x' + hexc[6:8]
