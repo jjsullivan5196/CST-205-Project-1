@@ -4,3 +4,5 @@ medianfinal.py is/will be the final result of this project. It's commented and e
 * marksimilarities.py
 * flipx.py
 * flipxclean.py
+
+Original images are located in images/originals use the folder to test the application.
