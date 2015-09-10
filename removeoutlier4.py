@@ -1,11 +1,22 @@
 import os
-import struct
     
 def rgb_to_hex(rgb):
   return '%02x%02x%02x' % rgb  
 def hex_to_rgb(hexc):
   h1, h2, h3 = hexc[0:4], '0x' + hexc[4:6], '0x' + hexc[6:8]
   return (int(h1, 16), int(h2, 16), int(h3, 16))
+  
+def avgColor(hexcolors):
+  r,g,b = 0,0,0
+  length = len(hexcolors)
+  for colors in hexcolors:
+    color = hex_to_rgb(hex(colors))
+    r += color[0]
+    g += color[1]
+    b += color[2]
+  return (r/length, g/length, b/length)
+  
+    
 
 pic = list()
 pix = list()
@@ -29,13 +40,12 @@ for idx, pixel in enumerate(newpix):
     color = (getRed(pixs[idx]), getGreen(pixs[idx]), getBlue(pixs[idx]))
     hexcolor = rgb_to_hex(color)
     sample.append(int(hexcolor, 16))
-  mode = hex(max(set(sample), key=sample.count))
-  newcolor = hex_to_rgb(mode)
+  #mode = hex(max(set(sample), key=sample.count))
+  #newcolor = hex_to_rgb(mode)
+  newcolor = avgColor(sample)
   setRed(pixel, newcolor[0])
   setGreen(pixel, newcolor[1])
   setBlue(pixel, newcolor[2])
-
-show(newpic)
   
-  
-  
+explore(newpic)
+writePictureTo(newpic, pickAFile())
