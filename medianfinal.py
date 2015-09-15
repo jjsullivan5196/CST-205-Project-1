@@ -62,7 +62,7 @@ def main():
       hexavg = avgColor([sample[index1], sample[index2]])
       newcolor = hex2rgb(hexavg)
     else:
-      index = length/2
+      index = ((length - 1)/2) + 1
       newcolor = hex2rgb(hex(sample[index]))
     #Set the pixel to the median color determined above in newcolor
     setRed(pixel, newcolor[0])
