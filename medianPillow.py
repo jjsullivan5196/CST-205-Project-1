@@ -10,14 +10,12 @@ root = tk.Tk()
 root.withdraw()
 showinfo('Median Filter', 'Select a directory with visually similar images') #Ask user for image directory
 picDir = askdirectory()
-pictures = list()
 pixels = list()
 
 for file in os.listdir(picDir): #Populate lists
     if file.endswith((".png", ".PNG", ".jpg", ".JPG", ".jpeg", ".JPEG")):
-        index = len(pictures)
-        pictures.append(Image.open(picDir + os.sep + file))
-        pixels.append(pictures[index].getdata())
+        tempPic = Image.open(picDir + os.sep + file)
+        pixels.append(tempPic.getdata())
 if(len(pictures) < 2): #Not enough images exception
     showerror('Error', 'Not enough images. Please restart with the correct directory')
     exit()
