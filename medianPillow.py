@@ -11,16 +11,17 @@ root.withdraw()
 showinfo('Median Filter', 'Select a directory with visually similar images') #Ask user for image directory
 picDir = askdirectory()
 pixels = list()
+tempPic = 0
 
 for file in os.listdir(picDir): #Populate lists
     if file.endswith((".png", ".PNG", ".jpg", ".JPG", ".jpeg", ".JPEG")):
         tempPic = Image.open(picDir + os.sep + file)
         pixels.append(tempPic.getdata())
-if(len(pictures) < 2): #Not enough images exception
+if(len(pixels) < 2): #Not enough images exception
     showerror('Error', 'Not enough images. Please restart with the correct directory')
     exit()
 
-newPicture = Image.new(pictures[0].mode, pictures[0].size) #Create new picture with matching dimensions
+newPicture = Image.new(tempPic.mode, tempPic.size) #Create new picture with matching dimensions
 newPixels = list(newPicture.getdata())
 
 for idx, pixel in enumerate(newPixels): #The medianfinal method, the Pillow way

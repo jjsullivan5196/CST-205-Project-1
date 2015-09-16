@@ -20,12 +20,13 @@ def main():
   showInformation("Pick a folder with a set of visually similar images.")
   picFolder = pickAFolder()  #Choose folder with images
   pixels = list()
+  tempPic = 0
 
   for file in os.listdir(picFolder):                                       #Iterate through directory for images
     if file.endswith((".png", ".PNG", ".jpg", ".JPG", ".jpeg", ".JPEG")):  #Filter for image file extensions
       tempPic = makePicture(picFolder + file)                              #Append all pngs to pictures list
       pixels.append(getAllPixels(pictures[index]))                         #Append pixels for every image to pixels list
-  if (len(pictures) < 2):  #Exception for not enough images
+  if (len(pixels) < 2):  #Exception for not enough images
     showError("Did not find enough images, restart with the correct directory.")
     return false
   
