@@ -10,7 +10,7 @@ Original images are located in images/originals use the folder to test the appli
 
 Also, for funsies:
 
-* medianPillow.py -- Same method as medianfinal.py, except it uses Python 3 and the Pillow PIL-fork instead of JES. *Runs 75% faster!*
+* medianPillow.py -- Same method as medianfinal.py, except it uses Python 3 and the Pillow PIL-fork instead of JES. **Runs 75% faster!**
 
 If I could have, I would have wanted to turn this one in as the final version, as it works much better than medianfinal.py. They both essentially do the same thing, but medianPillow seems to be faster and more correct.
 
