@@ -20,7 +20,7 @@ def main():
             pixels.append(tempPic.getdata())
     if(len(pixels) < 2): #Not enough images exception
         showerror('Error', 'Not enough images. Please restart with the correct directory')
-        exit()
+        return false
 
     newPicture = Image.new(tempPic.mode, tempPic.size) #Create new picture with matching dimensions
     newPixels = list(newPicture.getdata())
@@ -39,5 +39,8 @@ def main():
     if(askSave == 'yes'):
         fileName = asksaveasfilename()
         newPicture.save(fileName)
+        return true
+    else:
+        return true
 
 main()
