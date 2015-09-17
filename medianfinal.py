@@ -25,13 +25,13 @@ def main():
   for file in os.listdir(picFolder):                                       #Iterate through directory for images
     if file.endswith((".png", ".PNG", ".jpg", ".JPG", ".jpeg", ".JPEG")):  #Filter for image file extensions
       tempPic = makePicture(picFolder + file)                              #Append all pngs to pictures list
-      pixels.append(getAllPixels(pictures[index]))                         #Append pixels for every image to pixels list
+      pixels.append(getAllPixels(tempPic))                                  #Append pixels for every image to pixels list
   if (len(pixels) < 2):  #Exception for not enough images
     showError("Did not find enough images, restart with the correct directory.")
     return false
   
   #Create a blank image with matching dimensions to write our results to
-  newPicture = makeEmptyPicture(getWidth(pictures[0]), getHeight(pictures[0]))
+  newPicture = makeEmptyPicture(getWidth(tempPic), getHeight(tempPic))
   newPixels = getAllPixels(newPicture)  #Get pixels for this one too in order to edit
 
   for idx,pixel in enumerate(newPixels):
