@@ -1,4 +1,4 @@
-# CST-205-Project-1
+# CST-205-Project-1 : https://github.com/jjsullivan5196/CST-205-Project-1
 medianfinal.py is/will be the final result of this project. It's commented and everything for it to work is present in the source file. The rest is for arhive:
 
 * marksimilarities.py -- Marks similar pixels with a selected color
