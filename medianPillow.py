@@ -1,4 +1,5 @@
 #medianPillow.py -- Same method as medianfinal.py but using Python 3 and the Pillow PIL-fork
+#*NOTE: the .show() method works fine on Mac/Win, requires xv installed on linux. Install xv if you don't see an image.
 import os, sys
 from statistics import median
 import tkinter as tk
